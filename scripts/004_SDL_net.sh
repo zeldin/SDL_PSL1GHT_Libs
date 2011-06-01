@@ -11,7 +11,7 @@ cat ../patches/SDL_net-1.2.7.patch | patch -p1 || { exit 1; }
 CFLAGS="$CFLAGS -I$PSL1GHT/ppu/include"
 export CFLAGS
 
-./configure --prefix="$PSL1GHT/ppu" --host=ppu \
+./configure --prefix="$PS3DEV/portlibs/ppu" --host=ppu \
 	--disable-sdltest \
 	--with-sdl-exec-prefix="$PS3DEV/portlibs/ppu" \
 	--disable-shared \

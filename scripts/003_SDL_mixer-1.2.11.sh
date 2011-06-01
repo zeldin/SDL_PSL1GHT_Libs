@@ -8,7 +8,7 @@ cat ../patches/SDL_mixer-1.2.11.patch | patch -p1 || { exit 1; }
 
 LIBMIKMOD_CONFIG="$PS3DEV/portlibs/ppu/bin/libmikmod-config"
 export LIBMIKMOD_CONFIG
-./configure --prefix="$PSL1GHT/ppu" --host=ppu \
+./configure --prefix="$PS3DEV/portlibs/ppu" --host=ppu \
 	--disable-sdltest \
 	--with-sdl-exec-prefix="$PS3DEV/portlibs/ppu" \
 	--disable-shared \
