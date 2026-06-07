@@ -26,6 +26,12 @@ remote_size="$2"
 shift
 shift
 
+if [ -n "${CONFIGS_DIR}" ] && expr "$file" : config. >/dev/null; then
+    if [ -s "${CONFIGS_DIR}/$file" -a ! -s "$file" ]; then
+	cp "${CONFIGS_DIR}/$file" "$file"
+    fi
+fi
+
 if [ -s "$file" ]; then
   previous_file=yes
   if [ "$remote_size" = "-" ]; then
